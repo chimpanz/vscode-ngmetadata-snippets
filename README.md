@@ -1,0 +1,1 @@
+# vscode-ngmetadata-snippets
