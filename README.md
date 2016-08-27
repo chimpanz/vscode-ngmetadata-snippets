@@ -1,6 +1,6 @@
 # ngMetadata Snippets
 
-  [Visual Studio Code](https://code.visualstudio.com/) snippets for ngMetadata.
+  [Visual Studio Code](https://code.visualstudio.com/) typescript snippets for ngMetadata.
 
   * Copy snippets to snippet directory, or alternatively copy and paste the snippets into your existing json.
 
