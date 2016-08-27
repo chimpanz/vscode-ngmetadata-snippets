@@ -1,0 +1,142 @@
+{
+	"ng-bootstrap": {
+		"prefix": "ng-bootstrap",
+		"body": [
+            "import { enableProdMode } from 'ng-metadata/core';",
+            "import { bootstrap } from 'ng-metadata/platform';",
+            "",
+            "import { ${module} } from './$1';",
+            "",
+            "// enableProdMode();",
+            "",
+            "bootstrap( ${module} );",
+			"$0"
+		],
+		"description": "Angular 1 + ngMetadata Bootstrap Snippet"
+	},
+	"ng-component": {
+		"prefix": "ng-component",
+		"body": [
+            "import { Component, OnInit } from 'ng-metadata/core';",
+            "",
+            "@Component({",
+            "\t\tselector: '$1',",
+            "\t\ttemplate: `$2`",
+            "})",
+            "export class ${ComponentName}Component implements OnInit {",
+            "\t\tconstructor() { }",
+            "",   
+            "\t\tngOnInit() { }",
+            "",    
+            "}",
+			"$0"
+		],
+		"description": "Angular 1 + ngMetadata Component Snippet"
+	},
+	"ng-directive": {
+		"prefix": "ng-directive",
+		"body": [
+            "import { Directive, OnInit } from 'ng-metadata/core';",
+            "",
+            "@Directive({",
+            "\t\tselector: '[${myselector}]'",
+            "})",
+           "export class ${Selector}Directive implements OnInit {",
+            "\t\tconstructor() { }",
+            "",
+            "\t\tngOnInit() { }",
+            "",
+            "}",
+			"$0"
+		],
+		"description": "Angular 1 + ngMetadata Directive Snippet"
+	},
+	"ng-module": {
+		"prefix": "ng-module",
+		"body": [
+            "import * as angular from 'angular';",
+            "import { provide } from 'ng-metadata/core';",
+            "",
+            "export const ${ModuleName}Module = angular",
+            "\t\t.module( '${ModuleName}', [$1] )",
+            "\t\t.name;",
+            "$0"
+		],
+		"description": "Angular 1 + ngMetadata Module Snippet"
+	},
+	"ng-pipe": {
+		"prefix": "ng-pipe",
+		"body": [
+        "import { Pipe, PipeTransform } from 'ng-metadata/core';",
+        "",
+        "@Pipe({",
+        "\t\tname: '${name}'",
+        "})",
+        "",
+        "export class ${PipeName}Pipe implements PipeTransform {",
+        "\t\ttransform(value: any, args: any[]): any {",
+        "\t\t\t\t$1",
+        "\t\t}",
+        "}",
+        "$0"
+		],
+		"description": "Angular 1 + ngMetadata Pipe Snippet"
+	},
+	"ng-provide-c": {
+		"prefix": "ng-provide-c",
+		"body": [
+        ".constant(...provide('$1', {useValue: $2}))$0"
+		],
+		"description": "Angular 1 + ngMetadata register constant nippet"
+	},
+	"ng-provide-d": {
+		"prefix": "ng-provide-d",
+		"body": [
+        ".directive(...provide(${1}))$0"
+		],
+		"description": "Angular 1 + ngMetadata register directive/component snippet"
+	},
+	"ng-provide-p": {
+		"prefix": "ng-provide-p",
+		"body": [
+        ".filter(...provide($1})$0"
+		],
+		"description": "Angular 1 + ngMetadata register pipe snippet"
+	},
+	"ng-provide-s": {
+		"prefix": "ng-provide-s",
+		"body": [
+        ".service(...provide($1))$0"
+		],
+		"description": "Angular 1 + ngMetadata register service snippet"
+	},
+	"ng-provide-st": {
+		"prefix": "ng-provide-st",
+		"body": [
+        ".service(...provide('$1',{useClass: $2}))$0"
+		],
+		"description": "Angular 1 + ngMetadata register service via token snippet"
+	},
+	"ng-provide-v": {
+		"prefix": "ng-provide-v",
+		"body": [
+        ".value(...provide('$1',{useValue:$2}))$0"
+		],
+		"description": "Angular 1 + ngMetadata register value snippet"
+	},
+	"ng-service": {
+		"prefix": "ng-service",
+		"body": [
+        "import { Injectable } from 'ng-metadata/core';",
+        "",
+        "@Injectable()",
+        "export class ${ServiceName}Service {",
+        "",
+        "\t\tconstructor($1) { }",
+        "",
+        "}",
+        "$0"
+		],
+		"description": "Angular 1 + ngMetadata service snippet"
+	}
+}
